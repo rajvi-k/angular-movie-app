@@ -1,0 +1,94 @@
+import React from 'react';
+import { render } from 'react-dom';
+import { MovieComponent } from './components/movieComponent'
+import axios from "axios";
+import _ from 'lodash';
+
+
+
+class App extends React.Component {
+
+    constructor() {
+        super();
+        this.handleAllMovies = this.handleAllMovies.bind(this);
+        this.handleCreate = this.handleCreate.bind(this);
+        this.id = "59ba05cdec4f1c673b34240b"
+        this.state = {
+            items: []
+        }
+    }
+    
+    handleAllMovies = () => {
+        
+                    axios.get("http://localhost:4000/api/movies").then((result) => {
+                        this.setState({
+                            items: result.data
+                        })
+                    }).catch((err) => {
+                        console.log(err)
+                    })
+                }
+        
+    handleCreate = () => {
+        axios.post("http://localhost:4000/api/movies", {
+            title: "Newest movieeee",
+            year: "13 Oct 1996",
+            runtime: "180min",
+            genre: ["romantic", "musical"],
+            actors: ['srk', 'kajol'],
+            directors: ['adi', 'karan'],
+            writers: ['adi', 'karan'],
+            music: ["mere", "mujhko"],
+            singers: ["kumar", "udit"],
+            description: "A young man and woman - both of Indian descent but born and raised in Britain - fall in love during a trip to Switzerland. However, the girl's traditional father takes her back to India to fulfill a betrothal promise.",
+            language: ["hindi", "punjabi"],
+            awards: ["Zee Cine", "Star dust"],
+            poster: "https://upload.wikimedia.org/wikipedia/en/8/80/Dilwale_Dulhania_Le_Jayenge_poster.jpg",
+            trailer: "https://youtu.be/cmax1C1p660",
+            production: "Chopra",
+            reviews: [
+                { reviewer_name: "Swapnil", rating: 4, dateof_review: "13 Oct 1997", comments: "Nice Movie" },
+                { reviewer_name: "Sonu", rating: 5, dateof_review: "13 Oct 1997", comments: "Exc Movie" }
+            ]
+        }).then((res) => {
+            console.log("data:" + res)
+            this.componentDidMount();
+        })
+    }
+    handleDelete = () => {
+        handleDelete = () => {
+            console.log("entered delete" + this.delete);
+            axios.delete("http://localhost:4000/api/movies/" + this.id).then((res) => {
+                console.log(res); this.delete = "true"; console.log("exited delete" + this.delete);
+                this.renderDelete;
+
+            }).catch((err) => {
+                console.log(err);
+                this.delete = "false";
+            })
+
+        }
+    }
+    componentDidMount() {
+        this.setState({
+            items:result.data
+        })
+        
+    }
+
+    render() {
+        return (
+            <div>
+
+                <MovieComponent movieDetails={this.state.items} />
+                <button onClick={this.handleAllMovies}>MOVIES</button>
+                <button onClick={this.handleCreate}>Add MOVIES</button>
+            </div>
+        )
+    }
+}
+
+
+
+
+render(<App />, document.getElementById('app'));

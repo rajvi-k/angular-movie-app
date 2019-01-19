@@ -1,0 +1,22 @@
+import React from 'react';
+
+
+export class AdminDelete extends React.Component{
+    constructor(props){
+        super(props);
+        this.handleDelete=props.handleDelete.bind(this)
+    }
+    handleDelete=()=>{
+        this.props.handleDelete();
+        
+    }
+    render(){
+        console.log("deleted movie")
+        
+        return(<div>
+            <td><a href="#" className="btn btn-primary" role="button">Update</a> </td>
+            <td><a href="#" className="btn btn-default pull-right" role="button" onClick={this.handleDelete}>Delete</a></td>
+            </div>
+            )
+    }
+}

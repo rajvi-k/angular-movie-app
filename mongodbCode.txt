@@ -1,0 +1,121 @@
+use lntmovie
+
+db.movies.insertMany([
+       {
+        title:"DDLJ",
+        year:"13 Oct 1996",
+        runtime:"180min",
+        genre:["romantic","musical"],
+        actors:['srk','kajol'],
+        directors:['adi','karan'],
+        writers:['adi','karan'],
+        music:["mere","mujhko"],
+        singers:["kumar","udit"],
+        description:"A young man and woman - both of Indian descent but born and raised in Britain - fall in love during a trip to Switzerland. However, the girl's traditional father takes her back to India to fulfill a betrothal promise.",
+        language:["hindi","punjabi"],
+        awards:["Zee Cine","Star dust"],
+        poster:"https://upload.wikimedia.org/wikipedia/en/8/80/Dilwale_Dulhania_Le_Jayenge_poster.jpg",
+        trailer:"https://youtu.be/cmax1C1p660",
+        production:"Chopra",
+        reviews:[
+            {reviewer_name:"Swapnil",rating:4,dateof_review:"13 Oct 1997",comments:"Nice Movie"},           
+            {reviewer_name:"Sonu",rating:5,dateof_review:"13 Oct 1997",comments:"Exc Movie"}
+         ]    
+     },
+     {
+         title:"Kabali",
+         year:"28 Oct 2017",
+         runtime:"180min",
+         genre:["romantic","musical"],
+         actors:['Rajni','Dhansika','Radhika'],
+         directors:['adi','karan'],
+         writers:['adi','karan'],
+         music:["mere","mujhko"],
+         singers:["kumar","udit"],
+         description:"Kabali fights against the oppression faced by the Tamils working in Malaysia as labourers. However, he is jailed for twenty-five years and once released, he sets out to seek his revenge.",
+         language:["hindi","tamil"],
+         awards:["Zee Cine","Star dust"],
+         poster:"https://upload.wikimedia.org/wikipedia/en/9/9e/Rajinikanth_in_Kabali.jpg",
+         trailer:"https://youtu.be/9mdJV5-eias",
+         production:"Chopra",
+         reviews:[
+             {reviewer_name:"Swapnil",rating:4,dateof_review:"13 Oct 1997",comments:"Bore Movie"},           
+             {reviewer_name:"Sonu",rating:5,dateof_review:"13 Oct 1997",comments:"Exc Movie"}
+          ]    
+      },
+      {
+         title:"K3G",
+         year:"13 Oct 2000",
+         runtime:"180min",
+         genre:["romantic","musical"],
+         actors:['srk','kajol'],
+         directors:['adi','karan'],
+         writers:['adi','karan'],
+         music:["mere","mujhko"],
+         singers:["kumar","udit"],
+         description:"A young man and woman - both of Indian descent but born and raised in Britain - fall in love during a trip to Switzerland. However, the girl's traditional father takes her back to India to fulfill a betrothal promise.",
+         language:["hindi","punjabi"],
+         awards:["Zee Cine","Star dust"],
+         poster:"https://upload.wikimedia.org/wikipedia/en/0/0d/KabhiKhushiKabhiGham_Poster.jpg",
+         trailer:"https://youtu.be/u1iMm0fDLy4",
+         production:"YashRaj",
+         reviews:[
+             {reviewer_name:"Swapnil",rating:4,dateof_review:"13 Oct 1997",comments:"Nice Movie"},           
+             {reviewer_name:"Sonu",rating:5,dateof_review:"13 Oct 1997",comments:"Exc Movie"}
+          ]    
+      },
+      {
+         title:"Kal ho na ho",
+         year:"13 Oct 2004",
+         runtime:"180min",
+         genre:["romantic","musical"],
+         actors:['srk','kajol'],
+         directors:['adi','karan'],
+         writers:['adi','karan'],
+         music:["mere","mujhko"],
+         singers:["kumar","udit"],
+         description:"A young man and woman - both of Indian descent but born and raised in Britain - fall in love during a trip to Switzerland. However, the girl's traditional father takes her back to India to fulfill a betrothal promise.",
+         language:["hindi","punjabi"],
+         awards:["Zee Cine","Star dust"],
+         poster:"https://upload.wikimedia.org/wikipedia/en/b/b4/KalHoNaaHo.jpg",
+         trailer:"https://youtu.be/sii_2fvVgMI",
+         production:"YashRaj",
+         reviews:[
+             {reviewer_name:"Swapnil",rating:4,dateof_review:"13 Oct 1997",comments:"Nice Movie"},           
+             {reviewer_name:"Sonu",rating:5,dateof_review:"13 Oct 1997",comments:"Exc Movie"}
+          ]    
+      },
+      {
+         title:"Dangal",
+         year:"13 Oct 2016",
+         runtime:"180min",
+         genre:["romantic","musical"],
+         actors:['Surya','Samanta'],
+         directors:['adi','karan'],
+         writers:['adi','karan'],
+         music:["mere","mujhko"],
+         singers:["kumar","udit"],
+         description:"A young man and woman - both of Indian descent but born and raised in Britain - fall in love during a trip to Switzerland. However, the girl's traditional father takes her back to India to fulfill a betrothal promise.",
+         language:["hindi","punjabi"],
+         awards:["Zee Cine","Star dust"],
+         poster:"https://upload.wikimedia.org/wikipedia/en/9/99/Dangal_Poster.jpg",
+         trailer:"https://youtu.be/x_7YlGv9u1g",
+         production:"Amir Khan Prod",
+         reviews:[
+             {reviewer_name:"Swapnil",rating:4,dateof_review:"13 Oct 1997",comments:"Nice Movie"},           
+             {reviewer_name:"Sonu",rating:5,dateof_review:"13 Oct 1997",comments:"Exc Movie"}
+          ]    
+      }
+])
+db.movies.find()
+db.users.insertMany([{
+    username: "abc",
+    password: "pass"
+},{
+    username: "def",
+    password: "password"
+},{
+    username: "xyz",
+    password: "pass@123"
+}])
+db.users.find()
